@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://ys5wlxf64swr"]
+
+[ext_resource type="Script" path="res://Scripts/Room.gd" id="1_ny4c2"]
+[ext_resource type="Texture2D" uid="uid://dn31fys1iippq" path="res://Sprites/emptyroom.png" id="2_is27l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u77ue"]
+size = Vector2(58, 65)
+
+[node name="Room" type="Node2D"]
+script = ExtResource("1_ny4c2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640.5, 359.5)
+scale = Vector2(0.441964, 0.394054)
+texture = ExtResource("2_is27l")
+
+[node name="Door_north" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_north"]
+position = Vector2(639, 71)
+shape = SubResource("RectangleShape2D_u77ue")
+
+[node name="Door_south" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_south"]
+position = Vector2(638, 639)
+shape = SubResource("RectangleShape2D_u77ue")
+
+[node name="Door_east" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_east"]
+position = Vector2(85.5, 351.5)
+shape = SubResource("RectangleShape2D_u77ue")
+
+[node name="Door_west" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_west"]
+position = Vector2(1188, 360)
+shape = SubResource("RectangleShape2D_u77ue")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+enabled = false
