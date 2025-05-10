@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0u34c3p3d4xr"]
+
+[ext_resource type="Script" path="res://Scripts/GUI.gd" id="1_yqkj1"]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_yqkj1")
+
+[node name="Minimap" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 60.0
+offset_bottom = 59.0
+
+[node name="MapGrid" type="GridContainer" parent="Minimap"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 80.0
+offset_bottom = 79.0
+columns = 16
