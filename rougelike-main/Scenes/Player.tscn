@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbjgr022sdblh"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_jtmr2"]
+[ext_resource type="Texture2D" uid="uid://4v5jqfkbhv5" path="res://Sprites/O1.svg" id="2_upfoq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h7lm"]
+size = Vector2(33, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0ca8"]
+size = Vector2(29, 20)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_jtmr2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.50001, 33.5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_0h7lm")
+
+[node name="O1" type="Sprite2D" parent="."]
+position = Vector2(3, 5)
+texture = ExtResource("2_upfoq")
+
+[node name="DoorDetector" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorDetector"]
+position = Vector2(3.5, 40)
+shape = SubResource("RectangleShape2D_d0ca8")

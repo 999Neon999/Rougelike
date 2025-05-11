@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bx5gbvdp1shu5"]
+
+[ext_resource type="Texture2D" uid="uid://e8xap2g6vv33" path="res://Sprites/icon.svg" id="1_0bpm6"]
+[ext_resource type="Script" path="res://Scenes/Tear.gd" id="1_14rex"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wae0u"]
+
+[node name="Tear" type="Area2D"]
+script = ExtResource("1_14rex")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 0.5)
+scale = Vector2(0.15625, 0.164062)
+texture = ExtResource("1_0bpm6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wae0u")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

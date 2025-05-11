@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=2 format=3 uid="uid://b1828vxsjpl3b"]
+
+[ext_resource type="Script" path="res://Scripts/Stats.gd" id="1_35og0"]
+
+[resource]
+script = ExtResource("1_35og0")
+lives = 0
+health = 3.0
+max_health = 3.0
+tears = 2.73
+shot_speed = 1.0
+range = 500.0
+tear_height = 10.0
+knockback_factor = 1.0
